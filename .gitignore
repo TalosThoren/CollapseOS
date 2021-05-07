@@ -1,0 +1,23 @@
+# Vim Generated Files
+*.swp
+*~
+
+# Build Generated Files
+*.o
+os.*
+cvm/blkfs
+cvm/cos-grid
+cvm/cos-serial
+cvm/grid.bin
+cvm/stage
+cvm/vm.o
+tools/blkdown
+tools/blkpack
+tools/blkunpack
+tools/blkup
+tools/common.o
+tools/exec
+tools/memdump
+tools/pingpong
+tools/ttysafe
+tools/upload
