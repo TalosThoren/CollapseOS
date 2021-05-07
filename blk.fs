@@ -3,7 +3,7 @@ MASTER INDEX
 
 002 Common assembler words    005 Z80 assembler
 020 8086 assembler            030 AVR assembler
-050 6809 assembler            60-99 unused
+050 6809 assembler            060 rv32i assembler
 100 Block editor              110 Visual Editor
 120-149 unused                150 Remote Shell
 160 AVR SPI programmer        165 Sega ROM signer
@@ -594,6 +594,18 @@ CREATE wbr 0 C, ( wide BR? ) : wbr? wbr C@ 0 wbr C! ;
 ' IFZ, :* IF=,       ' IFNZ, :* IF!=,
 ' BHS, IFWORD IF<,   ' BHI, IFWORD IF<=,
 ' BLS, IFWORD IF>,   ' BLO, IFWORD IF>=,
+( ----- 060 )
+( rv32i assembler )
+58 LOAD+ ( common words )
+: zero 00 ;  : ra 01 ;  : sp 02 ;  : gp 03 ;
+: tp 04 ;    : t0 05 ;  : t1 06 ;  : t2 07 ;
+: s0 08 ;    : s1 09 ;  : a0 10 ;  : a1 11 ;
+: a2 12 ;    : a3 13 ;  : a4 14 ;  : a5 15 ;
+: a6 16 ;    : a7 17 ;  : s2 18 ;  : s3 19 ;
+: s4 20 ;    : s5 21 ;  : s6 22 ;  : s7 23 ;
+: s8 24 ;    : s9 25 ;  : s10 26 ; : s11 27 ;
+: t3 28 ;    : t4 29 ;  : t5 30 ;  : t6 31 ;
+1 32 LOADR+
 ( ----- 100 )
 ( Block editor. Load with "100 LOAD", see doc/ed.txt )
 CREATE ACC 0 ,
