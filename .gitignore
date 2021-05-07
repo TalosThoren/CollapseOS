@@ -1,0 +1,5 @@
+# Vim Generated Files
+*.swp
+*~
+
+# Build Generated Files
